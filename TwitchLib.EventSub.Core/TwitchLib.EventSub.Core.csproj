@@ -5,10 +5,10 @@
 	  <PackageId>TwitchLib.EventSub.Core</PackageId>
 	  <Title>TwitchLib.EventSub.Core</Title>
 	  <Authors>swiftyspiffy, Prom3theu5, Syzuna, LuckyNoS7evin</Authors>
-	  <VersionPrefix>2.5.1</VersionPrefix>
+	  <VersionPrefix>2.5.2</VersionPrefix>
 	  <VersionSuffix>$(VersionSuffix)</VersionSuffix>
-	  <AssemblyVersion>2.5.1</AssemblyVersion>
-	  <FileVersion>2.5.1</FileVersion>
+	  <AssemblyVersion>2.5.2</AssemblyVersion>
+	  <FileVersion>2.5.2</FileVersion>
 	  <Description>Contains Subscription Types and Models for Twitch's EventSub system</Description>
 	  <PackageIconUrl>https://cdn.syzuna-programs.de/images/twitchlib.png</PackageIconUrl>
 	  <PackageProjectUrl>https://github.com/TwitchLib/TwitchLib.EventSub.Websockets</PackageProjectUrl>
