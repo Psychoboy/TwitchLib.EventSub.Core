@@ -70,18 +70,22 @@ namespace TwitchLib.EventSub.Core.SubscriptionTypes.Channel
         /// <summary>
         /// Returns true if viewer is a subscriber
         /// </summary>
-        public bool IsSubscriber => Badges.Where(x => x.SetId.Equals("subscriber", StringComparison.OrdinalIgnoreCase)).Any();
+        public bool IsSubscriber => Badges.Any(x => x.SetId.Equals("subscriber", StringComparison.OrdinalIgnoreCase) || x.SetId.Equals("founder", StringComparison.OrdinalIgnoreCase));
         /// <summary>
         /// Returns true if viewer is a moderator
         /// </summary>
-        public bool IsModerator => Badges.Where(x => x.SetId.Equals("moderator", StringComparison.OrdinalIgnoreCase)).Any();
+        public bool IsModerator => Badges.Any(x => x.SetId.Equals("moderator", StringComparison.OrdinalIgnoreCase));
         /// <summary>
         /// Returns true if viewer is a broadcaster
         /// </summary>
-        public bool IsBroadcaster => Badges.Where(x => x.SetId.Equals("broadcaster", StringComparison.OrdinalIgnoreCase)).Any();
+        public bool IsBroadcaster => Badges.Any(x => x.SetId.Equals("broadcaster", StringComparison.OrdinalIgnoreCase));
         /// <summary>
         /// Returns true if viewer is a vip
         /// </summary>
-        public bool IsVip => Badges.Where(x => x.SetId.Equals("vip", StringComparison.OrdinalIgnoreCase)).Any();
+        public bool IsVip => Badges.Any(x => x.SetId.Equals("vip", StringComparison.OrdinalIgnoreCase));
+        /// <summary>
+        /// Returns true if viewer is a staff member
+        /// </summary>
+        public bool IsStaff => Badges.Any(x => x.SetId.Equals("staff", StringComparison.OrdinalIgnoreCase) || x.SetId.Equals("admin", StringComparison.OrdinalIgnoreCase));
     }
 }
