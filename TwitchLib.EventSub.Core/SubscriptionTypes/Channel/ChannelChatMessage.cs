@@ -70,7 +70,7 @@ namespace TwitchLib.EventSub.Core.SubscriptionTypes.Channel
         /// <summary>
         /// Returns true if viewer is a subscriber
         /// </summary>
-        public bool IsSubscriber => Badges.Any(x => x.SetId.Equals("subscriber", StringComparison.OrdinalIgnoreCase));
+        public bool IsSubscriber => Badges.Any(x => x.SetId.Equals("subscriber", StringComparison.OrdinalIgnoreCase) || x.SetId.Equals("founder", StringComparison.OrdinalIgnoreCase));
         /// <summary>
         /// Returns true if viewer is a moderator
         /// </summary>
@@ -83,5 +83,9 @@ namespace TwitchLib.EventSub.Core.SubscriptionTypes.Channel
         /// Returns true if viewer is a vip
         /// </summary>
         public bool IsVip => Badges.Any(x => x.SetId.Equals("vip", StringComparison.OrdinalIgnoreCase));
+        /// <summary>
+        /// Returns true if viewer is a staff member
+        /// </summary>
+        public bool IsStaff => Badges.Any(x => x.SetId.Equals("staff", StringComparison.OrdinalIgnoreCase) || x.SetId.Equals("admin", StringComparison.OrdinalIgnoreCase));
     }
 }
