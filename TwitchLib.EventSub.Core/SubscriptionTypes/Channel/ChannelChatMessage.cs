@@ -68,6 +68,31 @@ namespace TwitchLib.EventSub.Core.SubscriptionTypes.Channel
         public string ChannelPointsCustomRewardId { get; set; } = string.Empty;
 
         /// <summary>
+        /// Optional. The broadcaster user ID of the channel the message was sent from.
+        /// </summary>
+        public string SourceBroadcasterUserId { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Optional. The user name of the broadcaster of the channel the message was sent from.
+        /// </summary>
+        public string SourceBroadcasterUserName {  get; set; } = string.Empty;
+
+        /// <summary>
+        /// Optional. The login of the broadcaster of the channel the message was sent from. 
+        /// </summary>
+        public string SourceBroadcasterUserLogin {  get; set; } = string.Empty;
+
+        /// <summary>
+        /// Optional. The UUID that identifies the source message from the channel the message was sent from.
+        /// </summary>
+        public string SourceMessageId {  get; set; } = string.Empty;
+
+        /// <summary>
+        /// Optional. The list of chat badges for the chatter in the channel the message was sent from. 
+        /// </summary>
+        public ChatBadge[] SourceBadges { get; set; } = [];
+
+        /// <summary>
         /// Returns true if viewer is a subscriber
         /// </summary>
         public bool IsSubscriber => Badges.Any(x => x.SetId.Equals("subscriber", StringComparison.OrdinalIgnoreCase) || x.SetId.Equals("founder", StringComparison.OrdinalIgnoreCase));
