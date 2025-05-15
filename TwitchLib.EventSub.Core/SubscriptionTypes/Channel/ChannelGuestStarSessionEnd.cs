@@ -18,4 +18,16 @@ public sealed class ChannelGuestStarSessionEnd : ChannelGuestStarSessionBase
     /// RFC3339 timestamp indicating the time the session ended.
     /// </summary>
     public DateTimeOffset EndedAt { get; set; }
+    /// <summary>
+    /// User ID of the host channel.
+    /// </summary>
+    public string HostUserId { get; set; }
+    /// <summary>
+    /// The host display name.
+    /// </summary>
+    public string HostUserName { get; set; }
+    /// <summary>
+    /// The host login.
+    /// </summary>
+    public string HostUserLogin { get; set; }
 }

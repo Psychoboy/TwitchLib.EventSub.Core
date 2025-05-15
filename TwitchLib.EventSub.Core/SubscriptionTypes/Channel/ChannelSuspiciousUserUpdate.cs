@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using TwitchLib.EventSub.Core.Models.ChannelSuspiciousUser;
+﻿using TwitchLib.EventSub.Core.Models.ChannelSuspiciousUser;
 
 namespace TwitchLib.EventSub.Core.SubscriptionTypes.Channel;
 

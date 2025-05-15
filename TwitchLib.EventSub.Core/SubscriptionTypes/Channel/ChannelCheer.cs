@@ -1,4 +1,6 @@
-﻿namespace TwitchLib.EventSub.Core.SubscriptionTypes.Channel;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace TwitchLib.EventSub.Core.SubscriptionTypes.Channel;
 
 /// <summary>
 /// Channel Cheer subscription type model
@@ -10,6 +12,9 @@ public sealed class ChannelCheer
     /// <summary>
     /// Whether the user cheered anonymously or not.
     /// </summary>
+#if !NETSTANDARD
+    [MemberNotNullWhen(false, nameof(UserId), nameof(UserLogin), nameof(UserName))]
+#endif
     public bool IsAnonymous { get; set; }
     /// <summary>
     /// The user ID for the user who cheered on the specified channel. This is null if is_anonymous is true.

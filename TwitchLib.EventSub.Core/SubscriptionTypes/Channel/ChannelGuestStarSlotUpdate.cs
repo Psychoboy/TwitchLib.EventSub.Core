@@ -1,3 +1,4 @@
+using System;
 using TwitchLib.EventSub.Core.Models.GuestStar;
 
 namespace TwitchLib.EventSub.Core.SubscriptionTypes.Channel
@@ -7,6 +8,7 @@ namespace TwitchLib.EventSub.Core.SubscriptionTypes.Channel
     /// <para>Description:</para>
     /// <para>The channel.guest_star_slot.update subscription type sends a notification when a slot setting is updated in an active Guest Star session.</para>
     /// </summary>
+    [Obsolete("Removed 2023‑08‑24")]
     public class ChannelGuestStarSlotUpdate : ChannelGuestStarBase
     {
         /// <summary>

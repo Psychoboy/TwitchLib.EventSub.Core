@@ -29,6 +29,18 @@ public sealed class ChannelCharityCampaignStop
     /// </summary>
     public string BroadcasterName { get; set; } = string.Empty;
     /// <summary>
+    /// A description of the charity.
+    /// </summary>
+    public string CharityDescription { get; set; } = string.Empty;
+    /// <summary>
+    /// A URL to an image of the charity’s logo. The image’s type is PNG and its size is 100px X 100px.
+    /// </summary>
+    public string CharityLogo { get; set; } = string.Empty;
+    /// <summary>
+    /// A URL to the charity’s website.
+    /// </summary>
+    public string CharityWebsite { get; set; } = string.Empty;
+    /// <summary>
     /// An object that contains the final amount of donations that the campaign received.
     /// </summary>
     public CharityAmount CurrentAmount { get; set; } = new();

@@ -22,7 +22,15 @@ public abstract class CharityBase
     /// </summary>
     public string CharityName { get; set; } = string.Empty;
     /// <summary>
+    /// A description of the charity.
+    /// </summary>
+    public string CharityDescription { get; set; } = string.Empty;
+    /// <summary>
     /// A URL to the charity’s logo.
     /// </summary>
     public string CharityLogo { get; set; } = string.Empty;
+    /// <summary>
+    /// A URL to the charity’s website.
+    /// </summary>
+    public string CharityWebsite { get; set; } = string.Empty;
 }

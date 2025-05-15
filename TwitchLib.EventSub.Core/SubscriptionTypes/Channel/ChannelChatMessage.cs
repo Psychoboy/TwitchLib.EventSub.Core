@@ -52,6 +52,8 @@ namespace TwitchLib.EventSub.Core.SubscriptionTypes.Channel
         /// <para>channel_points_highlighted</para>
         /// <para>channel_points_sub_only</para>
         /// <para>user_intro</para>
+        /// <para>power_ups_message_effect</para>
+        /// <para>power_ups_gigantified_emote</para>
         public string MessageType { get; set; } = string.Empty;
 
         /// <summary>
@@ -65,32 +67,32 @@ namespace TwitchLib.EventSub.Core.SubscriptionTypes.Channel
         /// <summary>
         /// Optional. The ID of a channel points custom reward that was redeemed.
         /// </summary>
-        public string ChannelPointsCustomRewardId { get; set; } = string.Empty;
+        public string? ChannelPointsCustomRewardId { get; set; } = string.Empty;
 
         /// <summary>
         /// Optional. The broadcaster user ID of the channel the message was sent from.
         /// </summary>
-        public string SourceBroadcasterUserId { get; set; } = string.Empty;
+        public string? SourceBroadcasterUserId { get; set; } = string.Empty;
 
         /// <summary>
         /// Optional. The user name of the broadcaster of the channel the message was sent from.
         /// </summary>
-        public string SourceBroadcasterUserName {  get; set; } = string.Empty;
+        public string? SourceBroadcasterUserName {  get; set; } = string.Empty;
 
         /// <summary>
         /// Optional. The login of the broadcaster of the channel the message was sent from. 
         /// </summary>
-        public string SourceBroadcasterUserLogin {  get; set; } = string.Empty;
+        public string? SourceBroadcasterUserLogin {  get; set; } = string.Empty;
 
         /// <summary>
         /// Optional. The UUID that identifies the source message from the channel the message was sent from.
         /// </summary>
-        public string SourceMessageId {  get; set; } = string.Empty;
+        public string? SourceMessageId {  get; set; } = string.Empty;
 
         /// <summary>
         /// Optional. The list of chat badges for the chatter in the channel the message was sent from. 
         /// </summary>
-        public ChatBadge[] SourceBadges { get; set; } = [];
+        public ChatBadge[]? SourceBadges { get; set; } = [];
 
         /// <summary>
         /// Returns true if viewer is a subscriber

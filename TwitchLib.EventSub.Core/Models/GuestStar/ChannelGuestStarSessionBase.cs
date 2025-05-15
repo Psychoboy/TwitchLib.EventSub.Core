@@ -1,5 +1,3 @@
-using System;
-
 namespace TwitchLib.EventSub.Core.Models.GuestStar;
 
 public abstract class ChannelGuestStarSessionBase

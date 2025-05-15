@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TwitchLib.EventSub.Core.Models.ChannelSuspiciousUser;
+﻿namespace TwitchLib.EventSub.Core.Models.ChannelSuspiciousUser;
 
 public sealed class FragmentCheermote
 {
@@ -15,9 +11,9 @@ public sealed class FragmentCheermote
     /// <summary>
     /// The amount of bits cheered.
     /// </summary>
-    public int Bits { get; set; } = 0;
+    public int Bits { get; set; }
     /// <summary>
     /// The tier level of the cheermote.
     /// </summary>
-    public int Tier { get; set; } = 0;
+    public int Tier { get; set; }
 }
