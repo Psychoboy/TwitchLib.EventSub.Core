@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace TwitchLib.EventSub.Core.SubscriptionTypes.Channel;
 
@@ -60,5 +61,8 @@ public sealed class ChannelBan
     /// <summary>
     /// Indicates whether the ban is permanent (true) or a timeout (false). If true, EndsAt will be null.
     /// </summary>
+#if !NETSTANDARD
+    [MemberNotNullWhen(false, nameof(EndsAt))]
+#endif
     public bool IsPermanent { get; set; }
 }

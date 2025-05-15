@@ -32,8 +32,10 @@ public class ChannelPollBase
     /// </summary>
     public PollChoice[] Choices { get; set; } = Array.Empty<PollChoice>();
     /// <summary>
+    /// Not supported.
     /// The Bits voting settings for the poll.
     /// </summary>
+    [Obsolete("Removed 2022‑09‑01")]
     public PollVotingSettings BitsVoting { get; set; } = new();
     /// <summary>
     /// The Channel Points voting settings for the poll.

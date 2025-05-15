@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TwitchLib.EventSub.Core.Models.Chat;
+﻿namespace TwitchLib.EventSub.Core.Models.Chat;
 
 /// <summary>
 /// Information about the raid event. Null if notice_type is not raid.

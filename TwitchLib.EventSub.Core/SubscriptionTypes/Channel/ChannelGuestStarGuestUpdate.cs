@@ -10,6 +10,18 @@ namespace TwitchLib.EventSub.Core.SubscriptionTypes.Channel;
 public sealed class ChannelGuestStarGuestUpdate : ChannelGuestStarBase
 {
     /// <summary>
+    /// User ID of the host channel.
+    /// </summary>
+    public string HostUserId { get; set; }
+    /// <summary>
+    /// The host display name.
+    /// </summary>
+    public string HostUserName { get; set; }
+    /// <summary>
+    /// The host login.
+    /// </summary>
+    public string HostUserLogin { get; set; }
+    /// <summary>
     /// The current state of the user after the update has taken place. Can be one of the following:
     /// <para>
     /// invited — The guest has transitioned to the invite queue. This can take place when the guest was previously assigned a slot, but have been removed from the call and are sent back to the invite queue.

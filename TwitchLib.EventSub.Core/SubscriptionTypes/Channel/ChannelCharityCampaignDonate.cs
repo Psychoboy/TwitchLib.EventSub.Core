@@ -1,4 +1,5 @@
-﻿using TwitchLib.EventSub.Core.Models.Charity;
+﻿using System;
+using TwitchLib.EventSub.Core.Models.Charity;
 
 namespace TwitchLib.EventSub.Core.SubscriptionTypes.Channel;
 
@@ -9,6 +10,10 @@ namespace TwitchLib.EventSub.Core.SubscriptionTypes.Channel;
 /// </summary>
 public sealed class ChannelCharityCampaignDonate : CharityBase
 {
+    /// <summary>
+    /// An ID that identifies the donation. The ID is unique across campaigns.
+    /// </summary>
+    public string Id { get; set; } = string.Empty;
     /// <summary>
     /// An ID that uniquely identifies the charity campaign.
     /// </summary>
@@ -34,5 +39,6 @@ public sealed class ChannelCharityCampaignDonate : CharityBase
     /// <summary>
     /// The ISO-4217 three-letter currency code that identifies the type of currency in value.
     /// </summary>
+    [Obsolete("This property is a typo, please use: Amount.Currency")]
     public string Currency { get; set; } = string.Empty;
 }

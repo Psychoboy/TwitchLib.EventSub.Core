@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TwitchLib.EventSub.Core.Models.ChannelSuspiciousUser;
+﻿namespace TwitchLib.EventSub.Core.Models.ChannelSuspiciousUser;
 
 /// <summary>
 /// Channel suspicious user base class.

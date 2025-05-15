@@ -8,27 +8,27 @@
 public sealed class ChannelVip
 {
     /// <summary>
-    /// The user ID of the new/removed moderator.
+    /// The ID of the user who was added/removed as a VIP.
     /// </summary>
     public string UserId { get; set; } = string.Empty;
     /// <summary>
-    /// The display name of the new/removed moderator.
+    /// The display name of the user who was added/removed as a VIP.
     /// </summary>
     public string UserName { get; set; } = string.Empty;
     /// <summary>
-    /// The user login of the new/removed moderator.
+    /// The login of the user who was added/removed as a VIP.
     /// </summary>
     public string UserLogin { get; set; } = string.Empty;
     /// <summary>
-    /// The requested broadcaster ID.
+    /// The ID of the broadcaster.
     /// </summary>
     public string BroadcasterUserId { get; set; } = string.Empty;
     /// <summary>
-    /// The requested broadcaster display name.
+    /// The login of the broadcaster.
     /// </summary>
     public string BroadcasterUserName { get; set; } = string.Empty;
     /// <summary>
-    /// The requested broadcaster login.
+    /// The display name of the broadcaster.
     /// </summary>
     public string BroadcasterUserLogin { get; set; } = string.Empty;
 }

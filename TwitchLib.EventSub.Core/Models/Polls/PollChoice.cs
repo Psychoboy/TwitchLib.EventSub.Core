@@ -1,4 +1,6 @@
-﻿namespace TwitchLib.EventSub.Core.Models.Polls;
+﻿using System;
+
+namespace TwitchLib.EventSub.Core.Models.Polls;
 
 /// <summary>
 /// Defines a poll choice
@@ -14,8 +16,10 @@ public sealed class PollChoice
     /// </summary>
     public string Title { get; set; } = string.Empty;
     /// <summary>
+    /// Not used; will be set to 0.
     /// Number of votes received via Bits.
     /// </summary>
+    [Obsolete("Removed 2022‑09‑01")]
     public int? BitsVotes { get; set; }
     /// <summary>
     /// Number of votes received via Channel Points.

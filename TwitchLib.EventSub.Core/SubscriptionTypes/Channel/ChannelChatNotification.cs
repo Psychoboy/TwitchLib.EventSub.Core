@@ -73,6 +73,15 @@ public sealed class ChannelChatNotification
     /// <para>announcement</para>
     /// <para>bits_badge_tier</para>
     /// <para>charity_donation</para>
+    /// <para>shared_chat_sub</para>
+    /// <para>shared_chat_resub</para>
+    /// <para>shared_chat_sub_gift</para>
+    /// <para>shared_chat_community_sub_gift</para>
+    /// <para>shared_chat_gift_paid_upgrade</para>
+    /// <para>shared_chat_prime_paid_upgrade</para>
+    /// <para>shared_chat_raid</para>
+    /// <para>shared_chat_pay_it_forward</para>
+    /// <para>shared_chat_announcement</para>
     /// </summary>
     public string NoticeType { get; set; } = string.Empty;
     /// <summary>
@@ -123,4 +132,66 @@ public sealed class ChannelChatNotification
     /// Information about the bits badge tier event. Null if notice_type is not bits_badge_tier.
     /// </summary>
     public ChannelBitsBadgeTier? BitsBadgeTier { get; set; }
+
+    /// <summary>
+    /// Optional. The broadcaster user ID of the channel the message was sent from.
+    /// </summary>
+    public string? SourceBroadcasterUserId { get; set; }
+
+    /// <summary>
+    /// Optional. The user name of the broadcaster of the channel the message was sent from.
+    /// </summary>
+    public string? SourceBroadcasterUserName {  get; set; }
+
+    /// <summary>
+    /// Optional. The login of the broadcaster of the channel the message was sent from. 
+    /// </summary>
+    public string? SourceBroadcasterUserLogin {  get; set; }
+
+    /// <summary>
+    /// Optional. The UUID that identifies the source message from the channel the message was sent from.
+    /// </summary>
+    public string? SourceMessageId {  get; set; }
+
+    /// <summary>
+    /// Optional. The list of chat badges for the chatter in the channel the message was sent from. 
+    /// </summary>
+    public ChatBadge[]? SourceBadges { get; set; }
+    
+    /// <summary>
+    /// Information about the sub event. Null if notice_type is not shared_chat_sub.
+    /// </summary>
+    public ChatSub? SharedChatSub { get; set; }
+    /// <summary>
+    /// Information about the resub event. Null if notice_type is not shared_chat_resub.
+    /// </summary>
+    public ChatResub? SharedChatResub { get; set; }
+    /// <summary>
+    /// Information about the gift sub event. Null if notice_type is not shared_chat_sub_gift.
+    /// </summary>
+    public ChatSubGift? SharedChatSubGift { get; set; }
+    /// <summary>
+    /// Information about the community gift sub event. Null if notice_type is not shared_chat_community_sub_gift.
+    /// </summary>
+    public ChatCommunitySubGift? SharedChatCommunitySubGift { get; set; }
+    /// <summary>
+    /// Information about the community gift paid upgrade event. Null if notice_type is not shared_chat_gift_paid_upgrade.
+    /// </summary>
+    public ChatGiftPaidUpgrade? SharedChatGiftPaidUpgrade { get; set; }
+    /// <summary>
+    /// Information about the Prime gift paid upgrade event. Null if notice_type is not shared_chat_prime_paid_upgrade.
+    /// </summary>
+    public ChatPrimePaidUpgrade? SharedChatPrimePaidUpgrade { get; set; }
+    /// <summary>
+    /// Information about the raid event. Null if notice_type is not shared_chat_raid.
+    /// </summary>
+    public ChatRaid? SharedChatRaid { get; set; }
+    /// <summary>
+    /// Information about the pay it forward event. Null if notice_type is not shared_chat_pay_it_forward.
+    /// </summary>
+    public ChatPayItForward? SharedChatPayItForward { get; set; }
+    /// <summary>
+    /// Information about the announcement event. Null if notice_type is not shared_chat_announcement
+    /// </summary>
+    public ChatAnnouncement? SharedChatAnnouncement { get; set; }
 }

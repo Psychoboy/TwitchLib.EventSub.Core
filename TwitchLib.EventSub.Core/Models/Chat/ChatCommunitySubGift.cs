@@ -10,6 +10,10 @@ public sealed class ChatCommunitySubGift
     /// </summary>
     public string Id { get; set; } = string.Empty;
     /// <summary>
+    /// Number of subscriptions being gifted.
+    /// </summary>
+    public int Total { get; set; }
+    /// <summary>
     /// The type of subscription plan being used. Possible values are:
     /// <para>1000 — First level of paid subscription</para>
     /// <para>2000 — Second level of paid subscription</para>

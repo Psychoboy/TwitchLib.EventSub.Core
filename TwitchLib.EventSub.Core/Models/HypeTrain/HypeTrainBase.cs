@@ -8,6 +8,10 @@ namespace TwitchLib.EventSub.Core.Models.HypeTrain;
 public class HypeTrainBase
 {
     /// <summary>
+    /// The event ID.
+    /// </summary>
+    public string Id { get; set; } = string.Empty;
+    /// <summary>
     /// The requested broadcaster ID.
     /// </summary>
     public string BroadcasterUserId { get; set; } = string.Empty;
@@ -35,4 +39,8 @@ public class HypeTrainBase
     /// The current level of the Hype Train.
     /// </summary>
     public int Level { get; set; }
+    /// <summary>
+    /// Indicates if the Hype Train is a Golden Kappa Train.
+    /// </summary>
+    public bool IsGoldenKappaTrain { get; set; }
 }

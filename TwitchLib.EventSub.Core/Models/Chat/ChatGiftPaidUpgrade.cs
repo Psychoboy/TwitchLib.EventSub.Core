@@ -1,4 +1,6 @@
-﻿namespace TwitchLib.EventSub.Core.Models.Chat;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace TwitchLib.EventSub.Core.Models.Chat;
 
 /// <summary>
 /// Information about the community gift paid upgrade event. Null if notice_type is not gift_paid_upgrade.
@@ -8,6 +10,9 @@ public sealed class ChatGiftPaidUpgrade
     /// <summary>
     /// Whether the gift was given anonymously.
     /// </summary>
+#if !NETSTANDARD
+    [MemberNotNullWhen(false, nameof(GifterUserId), nameof(GifterUserLogin), nameof(GifterUserName))]
+#endif
     public bool GifterIsAnonymous { get; set; }
     /// <summary>
     /// Optional. The user ID of the user who gifted the subscription. Null if anonymous.
