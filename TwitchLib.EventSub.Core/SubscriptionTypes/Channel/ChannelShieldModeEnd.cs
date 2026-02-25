@@ -13,10 +13,5 @@ public sealed class ChannelShieldModeEnd : ShieldModeBase
     /// <summary>
     /// The UTC timestamp (in RFC3339 format) of when the moderator deactivated Shield Mode.
     /// </summary>
-    [Obsolete("This property is a typo, please use: EndedAt")]
-    public DateTimeOffset StartedAt { get; set; } = DateTimeOffset.MinValue;
-    /// <summary>
-    /// The UTC timestamp (in RFC3339 format) of when the moderator deactivated Shield Mode.
-    /// </summary>
     public DateTimeOffset EndedAt { get; set; } = DateTimeOffset.MinValue;
 }

@@ -1,23 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	  <TargetFrameworks>netstandard2.0;netstandard2.1;net5.0;net6.0;net7.0;net8.0</TargetFrameworks>
+	  <TargetFrameworks>netstandard2.0;netstandard2.1;net8.0;net9.0;net10.0</TargetFrameworks>
 	  <PackageId>TwitchLib.EventSub.Core</PackageId>
 	  <Title>TwitchLib.EventSub.Core</Title>
 	  <Authors>swiftyspiffy, Prom3theu5, Syzuna, LuckyNoS7evin</Authors>
-	  <VersionPrefix>2.5.3</VersionPrefix>
+	  <VersionPrefix>3.1.0</VersionPrefix>
 	  <VersionSuffix>$(VersionSuffix)</VersionSuffix>
-	  <AssemblyVersion>2.5.3</AssemblyVersion>
-	  <FileVersion>2.5.3</FileVersion>
+	  <AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+	  <FileVersion>$(VersionPrefix)</FileVersion>
 	  <Description>Contains Subscription Types and Models for Twitch's EventSub system</Description>
-	  <PackageIconUrl>https://cdn.syzuna-programs.de/images/twitchlib.png</PackageIconUrl>
+      <PackageIcon>twitchlib.png</PackageIcon>
 	  <PackageProjectUrl>https://github.com/TwitchLib/TwitchLib.EventSub.Websockets</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/TwitchLib/TwitchLib.EventSub.Websockets</RepositoryUrl>
 	  <RepositoryType>Git</RepositoryType>
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
-	  <Copyright>Copyright 2023</Copyright>
-	  <PackageTags>twitch library events eventsub subscriptiontypes c# csharp net netstandard2.0 netstandard2.1 5.0 6.0 7.0 8.0</PackageTags>
-	  <PackageReleaseNotes>Fixed Channel Chat Notification PayItFoward</PackageReleaseNotes>
+	  <Copyright>Copyright 2025</Copyright>
+	  <PackageTags>twitch library events eventsub subscriptiontypes c# csharp net</PackageTags>
+	  <PackageReleaseNotes>
+	  </PackageReleaseNotes>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
 	  <NeutralLanguage>en-US</NeutralLanguage>
 	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
@@ -25,10 +26,12 @@
 	  <EnableNETAnalyzers>True</EnableNETAnalyzers>
 	  <LangVersion>latest</LangVersion>
 	  <Nullable>enable</Nullable>
+      <NoWarn>1701;1702;CA1819</NoWarn>
   </PropertyGroup>
 	 
   <ItemGroup>
 	  <None Include="..\README.md" Pack="true" PackagePath="\" />
+	  <None Include="..\twitchlib.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 	 
   <ItemGroup>

@@ -36,7 +36,8 @@ public sealed class ChannelUpdate
     /// </summary>
     public string CategoryName { get; set; } = string.Empty;
     /// <summary>
-    /// A boolean identifying whether the channel is flagged as mature.
+    /// Array of content classification label IDs currently applied on the Channel.
+    /// To retrieve a list of all possible IDs, use the <see href="https://dev.twitch.tv/docs/api/reference/#get-content-classification-labels">Get Content Classification Labels</see> API endpoint.
     /// </summary>
-    public bool IsMature { get; set; }
+    public string[] ContentClassificationLabels { get; set; } = [];
 }
