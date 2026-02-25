@@ -1,7 +1,9 @@
-﻿namespace TwitchLib.EventSub.Core.Models.Chat
+﻿namespace TwitchLib.EventSub.Core.Models.Chat;
+
+public sealed class ChatCheer
 {
-    public sealed class ChatCheer
-    {
-        public int Bits { get; set; }
-    }
+    /// <summary>
+    /// The amount of Bits the user cheered.
+    /// </summary>
+    public int Bits { get; set; }
 }

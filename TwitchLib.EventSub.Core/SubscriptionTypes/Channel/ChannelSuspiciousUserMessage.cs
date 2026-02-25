@@ -2,6 +2,11 @@
 
 namespace TwitchLib.EventSub.Core.SubscriptionTypes.Channel;
 
+/// <summary>
+/// Channel Suspicious User Message subscription type model
+/// <para>Description:</para>
+/// <para>A notification when a chat message has been sent from a suspicious user.</para>
+/// </summary>
 public sealed class ChannelSuspiciousUserMessage : ChannelSuspiciousUserBase
 {
     /// <summary>

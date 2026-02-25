@@ -12,15 +12,15 @@ public sealed class ChannelGuestStarGuestUpdate : ChannelGuestStarBase
     /// <summary>
     /// User ID of the host channel.
     /// </summary>
-    public string HostUserId { get; set; }
+    public string HostUserId { get; set; } = string.Empty;
     /// <summary>
     /// The host display name.
     /// </summary>
-    public string HostUserName { get; set; }
+    public string HostUserName { get; set; } = string.Empty;
     /// <summary>
     /// The host login.
     /// </summary>
-    public string HostUserLogin { get; set; }
+    public string HostUserLogin { get; set; } = string.Empty;
     /// <summary>
     /// The current state of the user after the update has taken place. Can be one of the following:
     /// <para>

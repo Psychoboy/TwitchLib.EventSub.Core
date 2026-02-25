@@ -10,15 +10,15 @@ namespace TwitchLib.EventSub.Core.SubscriptionTypes.Channel;
 public sealed class ChannelShoutoutReceive : ShoutoutBase
 {
     /// <summary>
-    /// An ID that identifies the broadcaster that received the Shoutout.
+    /// An ID that identifies the broadcaster that sent the Shoutout.
     /// </summary>
-    public string ToBroadcasterUserId { get; set; } = string.Empty;
+    public string FromBroadcasterUserId { get; set; } = string.Empty;
     /// <summary>
-    /// The receiving broadcaster’s display name.
+    /// The broadcaster’s display name.
     /// </summary>
-    public string ToBroadcasterUserName { get; set; } = string.Empty;
+    public string FromBroadcasterUserName { get; set; } = string.Empty;
     /// <summary>
-    /// The receiving broadcaster’s login name.
+    /// The broadcaster’s login name.
     /// </summary>
-    public string ToBroadcasterUserLogin { get; set; } = string.Empty;
+    public string FromBroadcasterUserLogin { get; set; } = string.Empty;
 }

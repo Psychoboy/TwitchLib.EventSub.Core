@@ -46,9 +46,9 @@ public sealed class ChannelWarningSend
     /// <summary>
     /// Optional. The reason given for the warning.
     /// </summary>
-    public string Reason { get; set; } = string.Empty;
+    public string? Reason { get; set; }
     /// <summary>
     /// Optional. The chat rules cited for the warning.
     /// </summary>
-    public string[] ChatRulesCited { get; set; } = [string.Empty];
+    public string[]? ChatRulesCited { get; set; }
 }
