@@ -134,6 +134,11 @@ public sealed class ChannelChatNotification
     public ChannelBitsBadgeTier? BitsBadgeTier { get; set; }
 
     /// <summary>
+    /// Information about the Watch Streak event. Null if notice_type is not watch_streak.
+    /// </summary>
+    public WatchStreak? WatchStreak { get; set; }
+
+    /// <summary>
     /// Optional. The broadcaster user ID of the channel the message was sent from.
     /// </summary>
     public string? SourceBroadcasterUserId { get; set; }
@@ -162,6 +167,11 @@ public sealed class ChannelChatNotification
     /// Information about the sub event. Null if notice_type is not shared_chat_sub.
     /// </summary>
     public ChatSub? SharedChatSub { get; set; }
+    /// <summary>
+    /// Whether the notification is only sent to the source channel.
+    /// Is null if the notification is not in a shared chat session.
+    /// </summary>
+    public bool? IsSourceOnly { get; set; }
     /// <summary>
     /// Information about the resub event. Null if notice_type is not shared_chat_resub.
     /// </summary>
