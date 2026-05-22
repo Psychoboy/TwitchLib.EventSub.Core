@@ -38,7 +38,7 @@ public sealed class ChannelBitsUse
     /// </summary>
     public int Bits { get; set; }
     /// <summary>
-    /// Possible values are: cheer, power_up
+    /// Possible values are: cheer, power_up, custom_power_up
     /// </summary>
     public string Type { get; set; } = string.Empty;
     /// <summary>
@@ -49,4 +49,8 @@ public sealed class ChannelBitsUse
     /// Data about Power-up.
     /// </summary>
     public PowerUp? PowerUp { get; set; }
+    /// <summary>
+    /// Data about a custom Power-up.
+    /// </summary>
+    public CustomPowerUp? CustomPowerUp { get; set; }
 }
